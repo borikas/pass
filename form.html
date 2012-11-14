@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <script src="password_strength_modern.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title></title>
+</head>
+<body><br>
+<div align="center">
+<form style="width:300px;">
+    Password: <input id="password" type="password" name="password" tabindex="4">
+    <input type="button" value="submit">
+</form></div><br>
+
+
+<script type="text/javascript">
+    onload = function() {
+        new PasswordStrengther("password");
+        tooltip.create({
+                       'img':false,
+                       'id_el':[
+                               'a_popup_information'
+                         ],
+                       'id_txt':[
+                                'A good password is easy to remember <br>' +
+                                ' but hard for a stranger to guess. <br>' +
+                                'Uncommon words work well, but only if <br>' +
+                                ' you use several. Also helpful: <br>' +
+                                'non-standard uPPercasing, creative spelllling,<br>' +
+                                ' personal neologisms, and non-obvious numbers and<br>' +
+                                ' symbols (using $ for s or 0 for o is too obvious!)"'
+            	                ],
+        	           'pos' : [
+                                'bottomright'
+                	            ]
+        }); 
+
+    }
+
+
+</script>
+</body>
+</html>
+
+

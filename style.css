@@ -1,0 +1,28 @@
+.password_strength_container {
+    height: 10px;
+    margin-top: 2px;
+    position: relative;
+    width: 47%;
+}
+.password_strength {
+    height: 4px;
+    left: 0;
+    position: absolute;
+}
+element.style {
+    left: 75%;
+}
+.password_strength_desc {
+    float: right;
+    line-height: 16px;
+    margin-top: 6px;
+    margin-right: 5px;
+}
+.a_popup_information {
+    float: right;
+    line-height: 16px;
+    margin-top: 6px;
+
+}
+
+
