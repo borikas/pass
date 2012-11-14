@@ -16,27 +16,37 @@
 
 
 <script type="text/javascript">
-    onload = function() {
+    addListener(window, 'load', function() {
         new PasswordStrengther("password");
         tooltip.create({
-                       'img':false,
-                       'id_el':[
-                               'a_popup_information'
-                         ],
-                       'id_txt':[
-                                'A good password is easy to remember <br>' +
-                                ' but hard for a stranger to guess. <br>' +
-                                'Uncommon words work well, but only if <br>' +
-                                ' you use several. Also helpful: <br>' +
-                                'non-standard uPPercasing, creative spelllling,<br>' +
-                                ' personal neologisms, and non-obvious numbers and<br>' +
-                                ' symbols (using $ for s or 0 for o is too obvious!)"'
-            	                ],
-        	           'pos' : [
-                                'bottomright'
-                	            ]
-        }); 
+            'img':false,
+            'id_el':[
+                'a_popup_information'
+            ],
+            'id_txt':[
+                'A good password is easy to remember <br>' +
+                        ' but hard for a stranger to guess. <br>' +
+                        'Uncommon words work well, but only if <br>' +
+                        ' you use several. Also helpful: <br>' +
+                        'non-standard uPPercasing, creative spelllling,<br>' +
+                        ' personal neologisms, and non-obvious numbers and<br>' +
+                        ' symbols (using $ for s or 0 for o is too obvious!)"'
+            ],
+            'pos' : [
+                'bottomright'
+            ]
+        });
+    });
 
+    function addListener(obj, type, listener) {
+        if (obj.addEventListener) {
+            obj.addEventListener(type, listener, false);
+            return true;
+        } else if(obj.attachEvent) {
+            obj.attachEvent('on' + type, listener);
+            return true;
+        }
+        return false;
     }
 
 
